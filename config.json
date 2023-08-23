@@ -2,9 +2,13 @@
     "modules": [
         "login",
         "dashboard",
-        "case/counter",
-        "case/single_selection",
-        "case/multiple_selection"
+        "case/loading",
+        "case/disabled_button",
+        "case/visibility",
+        "case/timer",
+        "case/theme",
+        "case/animate",
+        "case/http_request"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,

@@ -14,5 +14,33 @@ class DashboardService {
       "label": "MultipleSelection",
       "view": const MultipleSelectionView(),
     },
+    {
+      "label": "Loading",
+      "view": const LoadingView(),
+    },
+    {
+      "label": "DisabledButton",
+      "view": const DisabledButtonView(),
+    },
+    {
+      "label": "Visibility",
+      "view": const VisibilityView(),
+    },
+    {
+      "label": "Timer",
+      "view": const TimerView(),
+    },
+    {
+      "label": "Animate",
+      "view": const AnimateView(),
+    },
+    {
+      "label": "Theme",
+      "view": const ThemeView(),
+    },
+    {
+      "label": "HttpRequest",
+      "view": const HttpRequestView(),
+    },
   ];
 }

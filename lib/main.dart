@@ -1,6 +1,5 @@
 import 'package:state_management_exercises/core.dart';
 import 'package:flutter/material.dart';
-import 'package:state_management_exercises/service/db/db.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

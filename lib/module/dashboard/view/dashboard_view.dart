@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:state_management_exercises/core.dart';
-import 'package:state_management_exercises/module/dashboard/service/dashboard_service.dart';
 
 class DashboardView extends StatefulWidget {
   const DashboardView({Key? key}) : super(key: key);
@@ -36,16 +35,16 @@ class DashboardView extends StatefulWidget {
                   return InkWell(
                     onTap: () => Get.to(item["view"]),
                     child: Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
-                            color: Color(0x19000000),
+                            color: Colors.grey[300]!,
                             blurRadius: 24,
-                            offset: Offset(0, 11),
+                            offset: const Offset(0, 11),
                           ),
                         ],
                         color: Colors.white,
-                        borderRadius: BorderRadius.all(
+                        borderRadius: const BorderRadius.all(
                           Radius.circular(12.0),
                         ),
                       ),

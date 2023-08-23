@@ -25,9 +25,21 @@ void generateDashboardService() {
   serviceContent.writeln("  List items = [");
 
   final caseDirectories = directory.listSync().whereType<Directory>();
-
+  List<Map<String, dynamic>> paths = [];
   for (var caseDir in caseDirectories) {
-    final caseName = caseDir.path.split("\\").last;
+    var path = caseDir.path.split("\\").last;
+    paths.add({
+      "number": int.parse(path.split("_").first),
+      "path": path,
+    });
+  }
+  paths.sort(
+    (a, b) => a["number"].compareTo(b["number"]),
+  );
+
+  for (var m in paths) {
+    var path = m["path"];
+    String caseName = path.split("\\").last;
 
     serviceContent.writeln("    {");
     serviceContent

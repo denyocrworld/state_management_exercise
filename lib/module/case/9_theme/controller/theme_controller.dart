@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:state_management_exercises/core.dart';
+import '../view/theme_view.dart';
 
-class LoginController extends State<LoginView> {
-  static late LoginController instance;
-  late LoginView view;
+class ThemeController extends State<ThemeView> {
+  static late ThemeController instance;
+  late ThemeView view;
 
   @override
   void initState() {
@@ -16,11 +17,4 @@ class LoginController extends State<LoginView> {
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
-
-  doLogin() async {
-    if (DB.name.isEmpty) return;
-    if (DB.whatsapp.isEmpty) return;
-    if (DB.email.isEmpty) return;
-    Get.offAll(const DashboardView());
-  }
 }

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:state_management_exercises/core.dart';
-import 'package:state_management_exercises/service/db/db.dart';
-import '../controller/login_controller.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({Key? key}) : super(key: key);
