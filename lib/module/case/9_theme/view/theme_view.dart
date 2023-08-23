@@ -10,7 +10,7 @@ class ThemeView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Theme"),
+        title: Text(toString()),
         actions: const [],
       ),
       body: SingleChildScrollView(

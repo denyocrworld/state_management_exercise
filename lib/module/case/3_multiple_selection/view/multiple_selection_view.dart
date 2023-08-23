@@ -9,7 +9,7 @@ class MultipleSelectionView extends StatefulWidget {
     controller.view = this;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Multiple Selection"),
+        title: Text(toString()),
         actions: const [],
       ),
       body: SingleChildScrollView(

@@ -10,7 +10,7 @@ class DisabledButtonView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("DisabledButton"),
+        title: Text(toString()),
         actions: const [],
       ),
       body: SingleChildScrollView(

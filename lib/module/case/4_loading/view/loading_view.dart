@@ -10,7 +10,7 @@ class LoadingView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Loading"),
+        title: Text(toString()),
         actions: const [],
       ),
       body: SingleChildScrollView(

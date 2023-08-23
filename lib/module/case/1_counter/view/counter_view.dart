@@ -10,7 +10,7 @@ class CounterView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Counter"),
+        title: Text(toString()),
         actions: const [],
       ),
       body: SingleChildScrollView(

@@ -10,7 +10,7 @@ class SingleSelectionView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Single Selection"),
+        title: Text(toString()),
         actions: const [],
       ),
       body: SingleChildScrollView(

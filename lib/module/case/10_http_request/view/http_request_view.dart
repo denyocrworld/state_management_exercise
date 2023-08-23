@@ -10,7 +10,7 @@ class HttpRequestView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("HttpRequest"),
+        title: Text(toString()),
         actions: const [],
       ),
       body: SingleChildScrollView(
