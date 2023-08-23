@@ -1,5 +1,4 @@
 import 'package:state_management_exercises/core.dart';
-import 'package:state_management_exercises/core.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
@@ -42,7 +41,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const LoginView(),
+      home: const DashboardView(),
     );
   }
 }
