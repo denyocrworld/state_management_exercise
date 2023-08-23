@@ -2,13 +2,7 @@
     "modules": [
         "login",
         "dashboard",
-        "case/loading",
-        "case/disabled_button",
-        "case/visibility",
-        "case/timer",
-        "case/theme",
-        "case/animate",
-        "case/http_request"
+        "case/game"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,

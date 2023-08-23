@@ -5,6 +5,8 @@ it means you have to rename it to something more unique.
 */
 export 'package:state_management_exercises/module/case/10_http_request/controller/http_request_controller.dart';
 export 'package:state_management_exercises/module/case/10_http_request/view/http_request_view.dart';
+export 'package:state_management_exercises/module/case/11_game/controller/game_controller.dart';
+export 'package:state_management_exercises/module/case/11_game/view/game_view.dart';
 export 'package:state_management_exercises/module/case/1_counter/controller/counter_controller.dart';
 export 'package:state_management_exercises/module/case/1_counter/view/counter_view.dart';
 export 'package:state_management_exercises/module/case/2_single_selection/controller/single_selection_controller.dart';

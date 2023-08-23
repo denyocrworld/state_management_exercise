@@ -42,5 +42,9 @@ class DashboardService {
       "label": "HttpRequest",
       "view": const HttpRequestView(),
     },
+    {
+      "label": "Game",
+      "view": const GameView(),
+    },
   ];
 }

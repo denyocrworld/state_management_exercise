@@ -97,12 +97,13 @@ class HttpRequestView extends StatefulWidget {
 
       Catatan
       Panggil method getUsers() di dalam initState
+      [HOT-Restart] dulu ya setelah memanggil kode ini
       
       UI Effect:
       Tampilkan list users ke dalam List.
       Tambahkan kode di itemBuilder:
       Map<String,dynamic> item = controller.users[index];
-      
+
       Tampilkan item["avatar"] di bagian leading image
       Tampilkan item["first_name"] di bagian title
       Tampilkan item["email"] di bagian subtitle
