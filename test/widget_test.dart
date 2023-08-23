@@ -14,6 +14,130 @@ void main() async {
   }
   int point = 0;
 
+  var tasks = [
+    {
+      "module": "counter",
+      "requirements": [
+        ": \${controller.counter}",
+        "() => increment()",
+        "() => decrement()",
+      ],
+    },
+    {
+      "module": "single_selection",
+      "requirements": [
+        "setState",
+        "updateSelectedIndex",
+      ],
+    },
+    {
+      "module": "multiple_selection",
+      "requirements": [
+        "setState",
+        "List selectedIndexes = [];",
+        "updateSelectedIndex",
+      ],
+    },
+    {
+      "module": "loading",
+      "requirements": [
+        "setState",
+        "bool loading = false;",
+        "setState",
+        "showLoading",
+        "hideLoading",
+      ],
+    },
+    {
+      "module": "disabled_button",
+      "requirements": [
+        "setState",
+        "bool enabled = false;",
+        "enableButton",
+        "disableButton",
+      ],
+    },
+    {
+      "module": "visibility",
+      "requirements": [
+        "setState",
+        "bool visible = false;",
+        "showBanner",
+        "hideBanner",
+      ],
+    },
+    {
+      "module": "timer",
+      "requirements": [
+        "setState",
+        "DateTime date = DateTime.now();",
+        "Timer? timer;",
+        "startTimer",
+        "stopTimer",
+        "timer?.cancel();",
+      ],
+    },
+    {
+      "module": "animate",
+      "requirements": [
+        "setState",
+        "bool animated = false;",
+        "doAnimation",
+        "resetAnimation",
+      ],
+    },
+    {
+      "module": "theme",
+      "requirements": [
+        "setState",
+        "ThemeData darkTheme = ThemeData.dark();",
+        "ThemeData lightTheme = ThemeData.light();",
+        "bool isDarkMode = true;",
+        "enableDarkTheme",
+        "enableLightTheme",
+      ],
+    },
+    {
+      "module": "http_request",
+      "requirements": [
+        "setState",
+        "List users = [];",
+        "getUsers",
+        "reset",
+      ],
+    },
+    {
+      "module": "game",
+      "requirements": [
+        "setState",
+        "int turns = 1;",
+        "List values",
+        "updateBoard",
+        "resetBoard",
+        "values[newIndex] = \"X\"",
+        "values[newIndex] = \"O\"",
+        "turns++",
+        "if(turns == 9) return;",
+      ],
+    },
+    //---
+  ];
+
+  for (var task in tasks) {
+    var module = task["module"];
+    var path =
+        "lib\\module\\case\\$module\\controller\\${module}_controller.dart".fix;
+    String content = File(path.toString().fix).readAsStringSync();
+    List requirements = task["requirements"] as List;
+
+    for (var req in requirements) {
+      print(req);
+      if (content.contains(req)) {
+        point++;
+      }
+    }
+  }
+
   print("POINT: $point");
 
   await Dio().post(

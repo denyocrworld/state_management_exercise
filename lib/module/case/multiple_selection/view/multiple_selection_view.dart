@@ -86,7 +86,7 @@ Tambahkan kode ini di Controller:
 List categories = ["Apple","Mango","Orange","Banana","Pineapple"];
 
 Tambahkan state:
-List selectedIndexes = [;]
+List selectedIndexes = [];
 
 Tambahkan method:
 updateSelectedIndex(int newIndex){}
