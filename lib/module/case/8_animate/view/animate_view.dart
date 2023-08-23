@@ -19,11 +19,12 @@ class AnimateView extends StatefulWidget {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
-              const Text(
-                "20:30",
-                style: TextStyle(
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.bold,
+              AnimatedContainer(
+                duration: const Duration(milliseconds: 900),
+                height: 100,
+                width: 100,
+                decoration: const BoxDecoration(
+                  color: Colors.red,
                 ),
               ),
               const SizedBox(
@@ -67,25 +68,20 @@ class AnimateView extends StatefulWidget {
                       Text(
                         """
 State
-DateTime date = DateTime.now();
-Timer? timer;
+bool animated = false;
 
 Method
-startTimer(){}
+doAnimation(){}
 T: Start button
-A: Menjalankan timer setiap 1 detik sekali, dan mengubah nilai date menjadi DateTime.now()
+A: Mengubah animated menjadi true
 
-stopTimer(){}
+resetAnimation(){}
 T: Stop button
-A: Mengancel timer, gunakan timer?.cancel();
-
-Catatan:
-Jangan lupa tambahkan kode ini dalam dispose(),
-timer?.cancel();
+A: Mengubah nilai animated menjadi false
 
 UI Effect:
-Gunakan DateFormat("kk:mm").format(controller.date)
-Untuk mengambil jam saat ini.
+animated == true, Ubah lebar container menjadi full width
+animated == false, ubah lebar container menjadi 100
       """,
                         style: TextStyle(
                           fontSize: 14.0,
